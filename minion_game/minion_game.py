@@ -1,11 +1,24 @@
 from collections import defaultdict
 
 
-def is_vowel(letter):
-    if letter.lower() in list('aeiou'):
+class C:
+    def __init__(self):
+        pass
+
+    def f_true(self):
         return True
-    else:
+
+    def f_false(self):
         return False
+
+
+def is_vowel(letter, c=None):
+    c = c or C()
+
+    if letter.lower() in list('aeiou'):
+        return c.f_true()
+    else:
+        return c.f_false()
 
 
 def scores(s):
