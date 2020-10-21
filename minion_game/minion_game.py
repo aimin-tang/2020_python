@@ -56,6 +56,8 @@ def minion_game(string):
     else:
         output = 'Draw'
 
+    print(output)
+
     return output
 
 
