@@ -48,6 +48,4 @@ def minion_game(string):
 
 if __name__ == '__main__':
     s = 'BANANA'
-    print(partial_score('ba', 0, 'Stuart'))
-    print(partial_score('ba', 1, 'Kevin'))
-    minion_game(s)
+    print(minion_game(s))

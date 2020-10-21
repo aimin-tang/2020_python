@@ -1,0 +1,24 @@
+Environment:
+============
+pyenv install 3.6.8
+
+Run code:
+=========
+git clone https://github.com/aimin-tang/2020_python.git ./examine
+cd examine/minion_game
+pipenv install
+pipenv shell
+python minion_game.py
+
+Run tests (after you run code):
+===============================
+cd examine/minion_game
+export PYTHONPATH=.
+pytest -v tests/unittest
+
+Cleanup:
+========
+pipenv --rm
+exit
+cd examine/..
+rm -rf examine
