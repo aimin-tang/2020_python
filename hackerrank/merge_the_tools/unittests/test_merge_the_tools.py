@@ -1,6 +1,7 @@
 from unittest.mock import call
 import unittest.mock as mock
 import merge_the_tools.src.merge_the_tools as m
+from io import StringIO
 
 def test_divide_string():
     string = 'AABCAAADA'
@@ -28,4 +29,5 @@ def test_merge_the_tools(mock_remove_duped, mock_divide_string):
     mock_divide_string.assert_called_with(string, k)
     assert mock_remove_duped.call_count == 2
     mock_remove_duped.assert_has_calls([call('AA'), call('BB')])
+    mock_out = mock.patch('sys.stdout', new=StringIO())
     assert result == 'A\nB'
